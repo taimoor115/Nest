@@ -1,4 +1,4 @@
-import { Controller, Get, Param, Patch, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Patch, Post } from '@nestjs/common';
 
 @Controller('property')
 export class PropertyController {
@@ -18,6 +18,11 @@ export class PropertyController {
         return "Create is completed"
     }
 
+    @Post("get-body")
+
+    getBody(@Body() body) {
+        return body;
+    }
 
 
 }
