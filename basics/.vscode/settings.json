@@ -1,0 +1,28 @@
+{
+    "editor.renderWhitespace": "none",
+    "editor.renderControlCharacters": false,
+    "editor.showFoldingControls": "always",
+    "editor.glyphMargin": true,
+    "editor.folding": true,
+    "editor.foldingStrategy": "auto",
+    "editor.showUnused": false,
+    "editor.unusedVariables": "off",
+    "editor.unusedParameters": "off",
+    "problems.decorations.enabled": false,
+    "editor.lightbulb.enabled": "off",
+    "editor.codeLens": false,
+    "editor.inlineSuggest.enabled": false,
+    "editor.quickSuggestions": {
+        "comments": "off",
+        "strings": "off",
+        "other": "off"
+    },
+    "editor.parameterHints.enabled": false,
+    "editor.hover.enabled": false,
+    "errorLens.enabled": false,
+    "errorLens.enabledDiagnosticLevels": [],
+    "trailing-spaces.highlightCurrentLine": false,
+    "trailing-spaces.includeEmptyLines": false,
+    "trailing-spaces.regexp": "",
+    "trailing-spaces.trimOnSave": false
+}
