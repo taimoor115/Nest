@@ -1,30 +1,45 @@
-import { Body, Controller, Get, HttpCode, Param, Patch, Post } from '@nestjs/common';
+import { Body, Controller, Get, HttpCode, Param, ParseBoolPipe, ParseIntPipe, Patch, Post, Query, UsePipes, ValidationPipe } from '@nestjs/common';
+import { PropertyDTO } from './dto/dto';
 
 @Controller('property')
 export class PropertyController {
 
-    @Get()
-    findAll() {
-        return "get all done"
-    }
+    // @Get()
+    // findAll() {
+    //     return "get all done"
+    // }
 
-    @Get(":id/:slug")
-    findOne(@Param("id") id: string, @Param("slug") slug: string) {
-        return { id, slug };
-    }
+    // @Get(":id/:slug")
+    // findOne(@Param("id") id: string, @Param("slug") slug: string) {
+    //     return { id, slug };
+    // }
+    // @Post("create")
+
+    // create() {
+    //     return "Create is completed"
+    // }
+
+    // @Post("get-body")
+
+    // @HttpCode(202)
+    // getBody(@Body() body) {
+    //     return body;
+    // }
+
+
+    // @Get("get-types/:id")
+    // findUser(@Param("id", ParseIntPipe) id, @Query("sort", ParseBoolPipe) sort: string) {
+    //     console.log("🚀 ~ PropertyController ~ findUser ~ id:", id)
+    //     console.log(typeof sort)
+    //     return "This is a request for types";
+    // }
+
     @Post("create")
 
-    create() {
-        return "Create is completed"
-    }
-
-    @Post("get-body")
-
-    @HttpCode(202)
-    getBody(@Body() body) {
+    @UsePipes(new ValidationPipe())
+    create(@Body() body: PropertyDTO) {
         return body;
     }
-
 
 }
 
