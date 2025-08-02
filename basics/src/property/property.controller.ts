@@ -37,14 +37,14 @@ export class PropertyController {
     @Post("create")
 
     // @UsePipes(new ValidationPipe({ whitelist: true, forbidNonWhitelisted: true, }))
-    create(@Body(new ValidationPipe({ whitelist: true, forbidNonWhitelisted: true, })) body: PropertyDTO) {
+    create(@Body(new ValidationPipe({ whitelist: true, forbidNonWhitelisted: true, always: true })) body: PropertyDTO) {
         return body;
     }
 
     @Patch("update")
 
     // @UsePipes(new ValidationPipe({ whitelist: true, forbidNonWhitelisted: true, }))
-    update(@Body(new ValidationPipe({ whitelist: true, forbidNonWhitelisted: true, })) body: PropertyDTO) {
+    update(@Body(new ValidationPipe({ whitelist: true, forbidNonWhitelisted: true, always: true })) body: PropertyDTO) {
         return body;
     }
 
