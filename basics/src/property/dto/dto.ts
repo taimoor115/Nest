@@ -2,7 +2,7 @@ import { IsInt, IsString, Length } from "class-validator";
 
 export class PropertyDTO {
 
-    @IsString()
+    @IsString({ always: true })
     @Length(2, 3)
     name: string;
     @IsString()

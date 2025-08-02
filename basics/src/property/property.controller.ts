@@ -41,5 +41,12 @@ export class PropertyController {
         return body;
     }
 
+    @Patch("update")
+
+    // @UsePipes(new ValidationPipe({ whitelist: true, forbidNonWhitelisted: true, }))
+    update(@Body(new ValidationPipe({ whitelist: true, forbidNonWhitelisted: true, })) body: PropertyDTO) {
+        return body;
+    }
+
 }
 
